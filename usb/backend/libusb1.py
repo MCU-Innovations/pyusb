@@ -297,6 +297,9 @@ def _setup_prototypes(lib):
     # int libusb_init (libusb_context **context)
     lib.libusb_init.argtypes = [POINTER(c_void_p)]
 
+    # int libusb_set_option (libusb_context *ctx, enum libusb_option option,...)
+    lib.libusb_set_option.argtypes = [c_void_p, c_int]
+
     # void libusb_exit (struct libusb_context *ctx)
     lib.libusb_exit.argtypes = [c_void_p]
 
